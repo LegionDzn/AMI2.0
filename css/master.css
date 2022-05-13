@@ -1,0 +1,142 @@
+@font-face {
+  font-family: wikipedia;
+  src: url(../../fonts/georgiai.ttf);
+}
+
+@font-face {
+  font-family: verdana;
+  src: url(../../fonts/verdana.ttf);
+}
+
+:root {
+  --main-bg-color: #161616;
+  --secondary-bg-color: #242424;
+  --border-color: #a3a3a3;
+  --text-color: white;
+  --br-color: #666666;
+  --link-color: #6a7da7;
+  --notquitewhite: #b8b8b8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: var(--main-bg-color);
+}
+
+html {
+  background-color: var(--main-bg-color);
+}
+
+a {
+  font-family: verdana;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 14px;
+  font-family: verdana;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+p.slightlydarker {
+  padding-top: 3px;
+  color: var(--notquitewhite);
+}
+li::marker,a:visited,a{
+  color: var(--link-color);
+  text-decoration: none;
+
+}
+a:hover{
+  text-decoration: underline;
+}
+#p_container {
+  width: 98%;
+  height: 96%;
+  background-color: var(--main-bg-color);
+  display: flex;
+  position: absolute;
+  left: 50%;
+  justify-content: space-between;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: row;
+}
+
+#c_container {
+  border: 1px solid var(--border-color);
+  width: -webkit-fill-available;
+  margin-left: 20px;
+  background-color: var(--secondary-bg-color);
+  overflow-y: scroll;
+}
+
+#c_container>* {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media screen and (max-width: 1100px) {
+  .video_container {
+    float: unset !important;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+
+  .heading2 {
+    text-align: center;
+  }
+}
+
+.video_container {
+  border: 1px solid var(--border-color);
+  width: calc(1920px * .3);
+  height: calc(1080px * .3);
+  float: right;
+}
+
+.c_container_inner {
+  margin-bottom: 5px;
+  min-height: calc(1080px * .3);
+}
+
+#l_container {
+  border: 1px solid var(--border-color);
+  width: 13%;
+  min-width: 236px;
+}
+
+.heading1 {
+  font-family: wikipedia;
+  font-size: 32px;
+}
+
+.heading2 {
+  font-size: 18px;
+}
+
+.br {
+  margin: 5px 0 5px 0;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: 96%;
+  background-color: var(--br-color);
+  height: 2px;
+  border-radius: 12px;
+}
